@@ -1,15 +1,17 @@
 import React from 'react';
-import CakeContainer from './components/todo'
+import TodoContainer from './components/todoContainer'
+import UserContainer from './components/UserContainer'
 import {Provider} from 'react-redux'
-import store from './redux/cakes/task/store'
+import store from './store/store'
 import './App.css';
  
 function App() {  
   return (
   <div>
     <Provider store={store}>
-<CakeContainer></CakeContainer>
-</Provider>
+      <TodoContainer></TodoContainer>
+      <UserContainer></UserContainer>
+    </Provider>
   </div>
   );
 }

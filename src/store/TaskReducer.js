@@ -10,14 +10,14 @@ export const addTaskReducer = (state=initialState,action)=>{
             return{
                 ...state,
                 task:[...state.task,action.task]
-}
-case DELETETASK:
-const deleteTask =  state.task.filter((value,index)=> index!==action.id)
-return {
-    ...state,
-    task:deleteTask
-}
+         }
+        case DELETETASK:
+        const deleteTask =  state.task.filter((value,index)=> index!==action.id)
+            return {
+            ...state,
+            task:deleteTask
+        }
 
-    default: return state
+        default: return state 
     }
 }
